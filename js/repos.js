@@ -4,6 +4,7 @@ exports.getRepos = function(user) {
   // var user = $('input#user').val();
   $.get('https://api.github.com/users/' + user + '/repos?access_token=' + apiKey).then(function(response){
     console.log(response);
+    $('#showUserName').text("User Name: " + response[0].owner.login);
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
