@@ -1,0 +1,10 @@
+Make sure that package.json and bower.json exist with desired dependencies listed before doing the following.
+
+
+run:
+
+npm init
+npm install
+
+bower init
+bower install
