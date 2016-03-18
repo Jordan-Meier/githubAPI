@@ -17,7 +17,13 @@ exports.getRepos = function(user) {
     });
     for (var i =0; i <= response.length; i++){
       var last_updated = new Date(response[i].updated_at);
-      $('#repos').append("<div id='singleRepo'><h5> Repository Name: " + response[i].name + "</h5><h5> Date Last Updated: " + last_updated + "</h5><h5>Repository Description: " + response[i].description + ".</h5></div><br>");
+      $('#repos').append("<div id='singleRepo'><h5 id='repoName'>Repository Name: <a href='" + response[i].html_url + "'>" +
+        response[i].name +
+        "</a></h5><h5> Date Last Updated: " +
+        last_updated +
+        "</h5><h5>Repository Description: " +
+        response[i].description +
+        ".</h5></div><br>");
     }
   }).fail(function(error){
     console.log(error.responseJSON.message);
