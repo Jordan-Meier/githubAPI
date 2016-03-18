@@ -12,7 +12,7 @@ This week's code review is a website where a user can go and enter a github user
 
 ### Known Bugs
 
-* Each user seems to only display up to 30 repositories, even if the user has more than 30 repos.
+* No known bugs.
 
 ### Setup
 
