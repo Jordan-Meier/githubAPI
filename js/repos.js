@@ -11,7 +11,7 @@ exports.getRepos = function(user) {
     console.log(error.responseJSON.message);
   });
 
-  $.get('https://api.github.com/users/' + user + '/repos?access_token=' + apiKey).then(function(response){
+  $.get('https://api.github.com/users/' + user + '/repos?access_token=' + apiKey + '&per_page=1000').then(function(response){
     response.sort(function(a,b){
       return new Date(b.updated_at) - new Date(a.updated_at);
     });
